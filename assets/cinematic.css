@@ -1562,3 +1562,115 @@ iframe {
     width: 92px;
   }
 }
+
+/* =========================================================
+   ABOUT NAME + PHOTO OVERLAP FIX
+   Keep this block at the very bottom of the CSS file.
+   ========================================================= */
+
+.about-identity {
+  grid-template-columns: minmax(0, 1.15fr) minmax(150px, 0.85fr);
+  gap: clamp(1.5rem, 3vw, 3rem);
+  align-items: center;
+}
+
+.about-copy {
+  position: relative;
+  z-index: 3;
+  min-width: 0;
+}
+
+.about-copy h2 {
+  position: relative;
+  z-index: 4;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  white-space: normal !important;
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+}
+
+.about-film-photo {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 190px;
+  justify-self: end;
+  margin: 0;
+  transform: rotate(4deg);
+}
+
+/* Desktop */
+@media (min-width: 901px) {
+  .about-copy h2 {
+    font-size: clamp(3.6rem, 5.4vw, 5.1rem) !important;
+    line-height: 0.82 !important;
+    letter-spacing: -0.05em !important;
+  }
+
+  .about-film-photo {
+    max-width: 180px;
+    margin-right: 0.5rem;
+  }
+
+  .about-float--top {
+    left: -26%;
+  }
+
+  .about-float--bottom {
+    right: -22%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 900px) and (min-width: 521px) {
+  .about-identity {
+    grid-template-columns: minmax(0, 1fr) 150px;
+    gap: 1.25rem;
+  }
+
+  .about-copy h2 {
+    font-size: clamp(3rem, 8vw, 4.4rem) !important;
+  }
+
+  .about-film-photo {
+    max-width: 150px;
+  }
+}
+
+/* Phone */
+@media (max-width: 520px) {
+  .about-identity {
+    grid-template-columns: minmax(0, 1fr) 96px;
+    gap: 0.7rem;
+    align-items: start;
+  }
+
+  .about-copy h2 {
+    font-size: clamp(2.45rem, 11.5vw, 3rem) !important;
+    line-height: 0.82 !important;
+    letter-spacing: -0.045em !important;
+  }
+
+  .about-film-photo {
+    width: 96px;
+    max-width: 96px;
+    margin-top: 0.25rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .about-identity {
+    grid-template-columns: minmax(0, 1fr) 84px;
+  }
+
+  .about-copy h2 {
+    font-size: clamp(2.15rem, 10.8vw, 2.65rem) !important;
+  }
+
+  .about-film-photo {
+    width: 84px;
+    max-width: 84px;
+  }
+}
