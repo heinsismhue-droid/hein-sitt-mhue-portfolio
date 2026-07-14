@@ -1465,3 +1465,100 @@ iframe {
     font-size: 2.05rem !important;
   }
 }
+
+/* =========================================================
+   FINAL NAME STACK + MOBILE SHOWCASE TABS FIX
+   Keep this block at the very bottom of the CSS file.
+   ========================================================= */
+
+/* Mobile showcase tabs: show all categories without swiping */
+@media (max-width: 768px) {
+  .showcase-tabs {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px;
+    width: 100%;
+    overflow: visible !important;
+    padding: 0;
+  }
+
+  .showcase-tab {
+    width: 100%;
+    min-width: 0 !important;
+    white-space: normal !important;
+    text-align: center;
+    justify-content: center;
+    padding: 0.95rem 0.7rem;
+  }
+}
+
+/* Keep the name as three clean lines: HEIN / SITT / MHUE */
+.about-copy h2 {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  white-space: normal !important;
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+}
+
+.about-copy h2 br {
+  display: block;
+}
+
+/* Desktop/tablet */
+@media (min-width: 521px) {
+  .about-copy h2 {
+    font-size: clamp(3rem, 6.2vw, 5.6rem) !important;
+    line-height: 0.82 !important;
+    letter-spacing: -0.055em !important;
+  }
+}
+
+/* Phone */
+@media (max-width: 520px) {
+  .about-identity {
+    grid-template-columns: minmax(0, 1fr) 104px;
+    gap: 0.75rem;
+    align-items: start;
+  }
+
+  .about-copy h2 {
+    font-size: clamp(2.55rem, 12.2vw, 3.25rem) !important;
+    line-height: 0.82 !important;
+    letter-spacing: -0.05em !important;
+    margin: 0;
+  }
+
+  .about-film-photo {
+    width: 104px;
+    justify-self: end;
+    margin-top: 0.25rem;
+  }
+
+  .about-float--top {
+    top: -12px;
+    left: -38px;
+  }
+
+  .about-float--bottom {
+    right: -20px;
+    bottom: -12px;
+  }
+}
+
+/* Extra-small phones */
+@media (max-width: 390px) {
+  .about-identity {
+    grid-template-columns: minmax(0, 1fr) 92px;
+    gap: 0.6rem;
+  }
+
+  .about-copy h2 {
+    font-size: clamp(2.25rem, 11.8vw, 2.8rem) !important;
+  }
+
+  .about-film-photo {
+    width: 92px;
+  }
+}
