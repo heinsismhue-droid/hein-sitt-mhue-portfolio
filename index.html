@@ -1,0 +1,684 @@
+<!doctype html>
+<html lang="en" class="dark" style="color-scheme: dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hein Sitt Mhue - Portfolio</title>
+    <meta
+      name="description"
+      content="Cinematic video editing, color grading, brand production, and viral content portfolio by Hein Sitt Mhue."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              border: "hsl(var(--border) / <alpha-value>)",
+              input: "hsl(var(--input) / <alpha-value>)",
+              ring: "hsl(var(--ring) / <alpha-value>)",
+              background: "hsl(var(--background) / <alpha-value>)",
+              foreground: "hsl(var(--foreground) / <alpha-value>)",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="./assets/cinematic.css" />
+  </head>
+  <body
+    class="bg-neutral-950 text-neutral-100 font-sans selection:bg-orange-500 selection:text-white antialiased"
+  >
+    <div
+      class="fixed inset-0 pointer-events-none z-50 opacity-[0.03] mix-blend-overlay bg-[url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop')]"
+      style="background-size: 200px 200px"
+    ></div>
+
+    <nav
+      class="sticky top-0 z-40 w-full border-b border-neutral-900 bg-neutral-950/80 backdrop-blur-md px-6 py-4 flex items-center justify-between"
+    >
+      <div class="text-sm font-bold tracking-widest uppercase text-white">
+        HEIN SITT MHUE<span class="text-orange-500">.</span>
+      </div>
+      <div
+        class="hidden md:flex items-center gap-8 text-xs tracking-widest uppercase text-neutral-400"
+      >
+        <a href="#showcase" class="hover:text-white transition-colors"
+          >Showcase</a
+        >
+        <a href="#about" class="hover:text-white transition-colors">About</a>
+        <a href="#case-studies" class="hover:text-white transition-colors"
+          >Case Studies</a
+        >
+        <a href="#contact" class="hover:text-white transition-colors"
+          >Contact</a
+        >
+      </div>
+      <a
+        href="#contact"
+        class="px-4 py-2 bg-white text-black text-xs font-semibold tracking-widest uppercase rounded hover:bg-neutral-200 transition-colors"
+        >Let's Talk</a
+      >
+    </nav>
+
+    <header
+      class="max-w-7xl mx-auto px-6 pt-12 grid grid-cols-2 gap-4 items-start select-none"
+    >
+      <div>
+        <p
+          class="text-[10px] tracking-widest text-neutral-500 uppercase font-mono"
+        >
+          [ CHAPTER · 01 ]
+        </p>
+        <p class="text-xs tracking-widest text-neutral-400 uppercase mt-1">
+          SELECTED WORKS · 2025 — 2026
+        </p>
+        <p class="text-[10px] tracking-wider text-neutral-500 uppercase">
+          YANGON · MYANMAR
+        </p>
+      </div>
+      <div class="text-right">
+        <p
+          class="text-[10px] tracking-widest text-neutral-500 uppercase font-mono"
+        >
+          [ Hobby ]
+        </p>
+        <p class="text-xs tracking-widest text-neutral-400 uppercase mt-1">
+          CREATIVE · CONTENT · EDIT
+        </p>
+      </div>
+    </header>
+
+    <section
+      class="hero-stage relative max-w-7xl mx-auto px-6 my-20 flex flex-col items-center justify-center min-h-[400px]"
+    >
+      <div
+        class="absolute top-0 left-[2%] md:left-[12%] z-10 w-28 md:w-44 bg-neutral-900 p-2 shadow-2xl -rotate-12 border border-neutral-800/60 transform hover:scale-105 transition-transform duration-300"
+      >
+        <img
+          src="./assets/P1.jpg"
+          alt="Production"
+          class="w-full h-24 md:h-40 object-cover grayscale opacity-80"
+        />
+        <div class="h-2 md:h-4 mt-1 md:mt-2"></div>
+      </div>
+
+      <!-- <div
+        class="absolute -top-12 left-[30%] md:left-[42%] z-20 w-32 md:w-48 bg-neutral-900 p-2 shadow-2xl rotate-3 border border-neutral-800 transform hover:scale-105 transition-transform duration-300"
+      >
+        <img
+          src="./assets/P2.png"
+          alt="Behind the scenes"
+          class="w-full h-28 md:h-44 object-cover"
+        />
+        <div class="h-2 md:h-4 mt-1 md:mt-2"></div>
+      </div> -->
+
+      <div
+        class="absolute bottom-4 right-[2%] md:right-[15%] z-10 w-28 md:w-44 bg-neutral-900 p-2 shadow-2xl rotate-12 border border-neutral-800/60 transform hover:scale-105 transition-transform duration-300"
+      >
+        <img
+          src="./assets/P2.png"
+          alt="Camera"
+          class="w-full h-24 md:h-40 object-cover grayscale opacity-80"
+        />
+        <div class="h-2 md:h-4 mt-1 md:mt-2"></div>
+      </div>
+
+      <h1
+        class="font-black tracking-tighter leading-[0.85] text-white select-none z-0 uppercase text-center flex flex-col md:block"
+      >
+        <span class="text-[18vw] md:text-[9vw] block md:inline">PORT</span>
+        <span class="text-[18vw] md:text-[9vw] block md:inline"
+          >FOLIO<span class="text-orange-500">.</span></span
+        >
+      </h1>
+    </section>
+
+    <section
+      id="about"
+      class="about-section max-w-7xl mx-auto px-6 py-16 border-t border-neutral-900"
+    >
+      <div class="about-identity">
+        <div class="about-copy">
+          <h2
+            class="text-4xl md:text-5xl font-black tracking-tight text-white uppercase leading-none"
+          >
+            HEIN SITT<br />MHUE<span class="text-orange-500">.</span>
+          </h2>
+          <p
+            class="text-xs tracking-widest text-neutral-400 uppercase font-mono"
+          >
+            Video Creator / Creative Content Creator & Video Editor
+          </p>
+        </div>
+
+        <figure class="about-film-photo" aria-label="Film photograph">
+          <span class="about-float about-float--top"
+            >● VISUAL STORYTELLING</span
+          >
+          <span class="about-float about-float--bottom">EDIT → IMPACT</span>
+          <img src="./assets/about-film.jpg" alt="Cinematic landscape" />
+          <figcaption>FRAME / 24</figcaption>
+        </figure>
+      </div>
+
+      <div class="about-description">
+        <div class="about-description-inner">
+          <p
+            class="text-lg md:text-xl text-neutral-300 leading-relaxed max-w-2xl"
+          >
+            Creative Content Creator & Video Editor with a strong background in
+            social media production. Skilled in full video workflows,
+            post-production, and team collaboration. Passionate about delivering
+            high-impact visual storytelling.
+          </p>
+          <a
+            class="download-cv"
+            href="./assets/CVform.jpg"
+            download="Hein-Sitt-Mhue-CV.jpg"
+          >
+            <span>Download CV</span>
+            <span class="download-cv__icon" aria-hidden="true">↓</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="showcase"
+      class="cinematic-section max-w-7xl mx-auto px-6 py-20 border-t border-neutral-900"
+      aria-labelledby="showcase-title"
+    >
+      <div class="section-heading reveal-heading">
+        <div>
+          <p class="eyebrow">// VIDEO SHOWCASE PORTFOLIO</p>
+          <h2 id="showcase-title" class="display-heading">
+            Frames With<br /><span>Intent.</span>
+          </h2>
+        </div>
+        <p class="section-note">
+          A selected archive of commercial polish, long-form pacing,
+          social-first hooks, and street-level energy.
+        </p>
+      </div>
+
+      <div class="showcase-tabs" role="tablist" aria-label="Video categories">
+        <button
+          class="showcase-tab is-active"
+          type="button"
+          role="tab"
+          aria-selected="true"
+          data-category="grading"
+        >
+          <span>01</span> Color & Cinema
+        </button>
+        <button
+          class="showcase-tab"
+          type="button"
+          role="tab"
+          aria-selected="false"
+          data-category="brand"
+        >
+          <span>02</span> Event & Brand
+        </button>
+        <button
+          class="showcase-tab"
+          type="button"
+          role="tab"
+          aria-selected="false"
+          data-category="longform"
+        >
+          <span>03</span> Podcasts & Short-Form
+        </button>
+        <button
+          class="showcase-tab"
+          type="button"
+          role="tab"
+          aria-selected="false"
+          data-category="street"
+        >
+          <span>04</span> Street & Entertainment
+        </button>
+        <button
+          class="showcase-tab"
+          type="button"
+          role="tab"
+          aria-selected="false"
+          data-category="reels"
+        >
+          <span>05</span> Reels & Pranks
+        </button>
+      </div>
+
+      <div
+        id="showcase-grid"
+        class="showcase-grid"
+        role="tabpanel"
+        aria-live="polite"
+      ></div>
+    </section>
+
+    <!-- <section id="video" class="max-w-7xl mx-auto px-6 py-16 border-t border-neutral-900">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+      <div>
+        <p class="text-xs tracking-widest text-neutral-500 uppercase font-mono mb-2">// LONG FORM & COMMERCIALS</p>
+        <h2 class="text-3xl md:text-4xl font-black tracking-tight text-white uppercase">Featured Videos</h2>
+      </div>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="group relative bg-neutral-900 border border-neutral-800 rounded overflow-hidden">
+        <div class="aspect-video bg-neutral-950 flex items-center justify-center overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Video Project 1">
+        </div>
+        <div class="p-6">
+          <h3 class="text-lg font-bold text-white uppercase">Bowen School Promotional Video</h3>
+          <p class="text-xs text-neutral-400 mt-2">Full video editing, color grading, and sound design for social media ad campaign.</p>
+        </div>
+      </div>
+      <div class="group relative bg-neutral-900 border border-neutral-800 rounded overflow-hidden">
+        <div class="aspect-video bg-neutral-950 flex items-center justify-center overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Video Project 2">
+        </div>
+        <div class="p-6">
+          <h3 class="text-lg font-bold text-white uppercase">Legacy Co. Advertisement</h3>
+          <p class="text-xs text-neutral-400 mt-2">Commercial video editing tailored for high engagement and brand awareness.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="shorts" class="max-w-7xl mx-auto px-6 py-16 border-t border-neutral-900">
+    <div class="mb-12">
+      <p class="text-xs tracking-widest text-neutral-500 uppercase font-mono mb-2">// SHORT FORM CONTENT</p>
+      <h2 class="text-3xl md:text-4xl font-black tracking-tight text-white uppercase">Shorts & Reels</h2>
+    </div>
+    
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="bg-neutral-900 border border-neutral-800 rounded aspect-[9/16] overflow-hidden group">
+        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Short 1">
+      </div>
+      <div class="bg-neutral-900 border border-neutral-800 rounded aspect-[9/16] overflow-hidden group">
+        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Short 2">
+      </div>
+      <div class="bg-neutral-900 border border-neutral-800 rounded aspect-[9/16] overflow-hidden group">
+        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Short 3">
+      </div>
+      <div class="bg-neutral-900 border border-neutral-800 rounded aspect-[9/16] overflow-hidden group">
+        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Short 4">
+      </div>
+    </div>
+  </section> -->
+
+    <section
+      id="case-studies"
+      class="cinematic-section max-w-7xl mx-auto px-6 py-20 border-t border-neutral-900"
+      aria-labelledby="case-studies-title"
+    >
+      <div class="section-heading case-study-heading reveal-heading">
+        <div>
+          <p class="eyebrow">// VIRAL CASE STUDIES DASHBOARD</p>
+          <h2 id="case-studies-title" class="display-heading">
+            Attention,<br /><span>Engineered.</span>
+          </h2>
+        </div>
+        <p class="section-note">
+          Three performance breakdowns where visual rhythm, immediate clarity,
+          and interaction design converted passing attention into measurable
+          response.
+        </p>
+      </div>
+
+      <div class="case-grid case-grid--final">
+        <a
+          class="case-card case-card--portrait lens-card reveal-card case-link case-preview-card"
+          href="https://www.tiktok.com/@lynyuebms70/video/7610439134003465492?is_from_webapp=1&sender_device=pc&web_id=7547553950179968520"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Watch Cinematic Retention Hook on TikTok"
+        >
+          <div class="case-visual case-preview-media">
+            <video
+              class="case-preview-video"
+              src="./assets/previews/case-001-preview.mp4"
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              aria-hidden="true"
+            ></video>
+            <span class="frame-code">9 : 16 / PORTRAIT STUDY</span>
+            <span class="case-play" aria-hidden="true"><i></i></span>
+          </div>
+          <div class="case-copy">
+            <div class="case-topline">
+              <span>@lynyuebms70</span><span>CASE / 001</span>
+            </div>
+            <h3>Cinematic Retention Hook</h3>
+            <div class="metric-grid metric-grid--compact">
+              <div>
+                <strong data-count="1000000" data-format="compact">0</strong
+                ><span>Views</span>
+              </div>
+              <div>
+                <strong data-count="125000" data-format="compact">0</strong
+                ><span>Likes</span>
+              </div>
+              <div>
+                <strong data-count="3500" data-format="compact">0</strong
+                ><span>Comments</span>
+              </div>
+              <div>
+                <strong data-count="10800" data-format="compact">0</strong
+                ><span>Shares & Saves</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a
+          class="case-card case-card--portrait lens-card reveal-card case-link case-preview-card"
+          href="https://vt.tiktok.com/ZSX26RxxY/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Watch Gamified Visual Interaction on TikTok"
+        >
+          <div class="case-visual case-preview-media">
+            <video
+              class="case-preview-video"
+              src="./assets/previews/case-003-preview.mp4"
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              aria-hidden="true"
+            ></video>
+            <span class="frame-code">9 : 16 / PORTRAIT STUDY</span>
+            <span class="case-play" aria-hidden="true"><i></i></span>
+          </div>
+          <div class="case-copy">
+            <div class="case-topline">
+              <span>@mhann_myanmar</span><span>CASE / 002</span>
+            </div>
+            <h3>Visual Interaction</h3>
+            <div class="metric-grid metric-grid--compact">
+              <div>
+                <strong
+                  data-count="342200"
+                  data-decimal="1"
+                  data-format="compact"
+                  >0</strong
+                ><span>Views</span>
+              </div>
+              <div>
+                <strong data-count="9400" data-decimal="1" data-format="compact"
+                  >0</strong
+                ><span>Likes</span>
+              </div>
+              <div><strong data-count="233">0</strong><span>Saves</span></div>
+              <div><strong data-count="9">0</strong><span>Comments</span></div>
+            </div>
+          </div>
+        </a>
+
+        <a
+          class="case-card case-card--landscape lens-card reveal-card case-link case-preview-card"
+          href="https://vt.tiktok.com/ZSX26EHnX/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Watch 3-Second Visual Hook on TikTok"
+        >
+          <div class="case-visual case-preview-media">
+            <video
+              class="case-preview-video"
+              src="./assets/previews/case-002-preview.mp4"
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              aria-hidden="true"
+            ></video>
+            <span class="frame-code">16 : 9 / LANDSCAPE STUDY</span>
+            <span class="case-play" aria-hidden="true"><i></i></span>
+          </div>
+          <div class="case-copy">
+            <div class="case-topline">
+              <span>@thuraintun036</span><span>CASE / 003</span>
+            </div>
+            <h3>3-Second Visual Hook</h3>
+            <div class="metric-grid">
+              <div>
+                <strong
+                  data-count="579800"
+                  data-decimal="1"
+                  data-format="compact"
+                  >0</strong
+                ><span>Views</span>
+              </div>
+              <div>
+                <strong
+                  data-count="54200"
+                  data-decimal="1"
+                  data-format="compact"
+                  >0</strong
+                ><span>Likes</span>
+              </div>
+              <div>
+                <strong data-count="177">0</strong><span>Comments</span>
+              </div>
+              <div>
+                <strong data-count="1800" data-decimal="1" data-format="compact"
+                  >0</strong
+                ><span>Saves</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section
+      class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-neutral-900"
+    >
+      <div>
+        <h3
+          class="text-xs tracking-widest uppercase text-neutral-500 font-mono mb-6"
+        >
+          // EDUCATION
+        </h3>
+        <div class="flex flex-col gap-6">
+          <div>
+            <h4 class="text-sm font-bold text-white">Matriculation Pass</h4>
+            <p class="text-xs text-neutral-400 mt-1">2024 — 2025</p>
+          </div>
+          <div>
+            <h4 class="text-sm font-bold text-white">First Year at Y-MAX</h4>
+            <p class="text-xs text-neutral-400 mt-1">2025 — 2027</p>
+            <p class="text-xs text-neutral-500">
+              Bachelor of Computing Technology
+            </p>
+          </div>
+          <div class="mt-4">
+            <h3
+              class="text-xs tracking-widest uppercase text-neutral-500 font-mono mb-4"
+            >
+              // LANGUAGES
+            </h3>
+            <p class="text-xs text-neutral-300">
+              <b>Burmese (Native)</b><br /><br />
+              <b>English (Upper-intermediate)</b>
+              <!-- <br /><br /><b>Chinese (Basic)</b> -->
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3
+          class="text-xs tracking-widest uppercase text-neutral-500 font-mono mb-6"
+        >
+          // WORK EXPERIENCE
+        </h3>
+        <div class="flex flex-col gap-6 text-xs text-neutral-400">
+          <div>
+            <h4 class="text-sm font-bold text-white uppercase">
+              Video Editor (Freelancer)
+            </h4>
+            <p class="text-neutral-500 my-0.5">
+              Nexovate Production Agency & Other Creator
+            </p>
+            <ul class="list-disc pl-4 space-y-1 mt-1 text-neutral-400">
+              <li>
+                Collaborate with diverse clients to deliver custom video
+                content.
+              </li>
+              <li>
+                Manage full editing workflows from raw footage to final cut.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-sm font-bold text-white uppercase">
+              Content Creator & Video Editor
+            </h4>
+            <p class="text-neutral-500 my-0.5">
+              2025 | 6 Months — MyanmarLoad Company
+            </p>
+            <ul class="list-disc pl-4 space-y-1 mt-1 text-neutral-400">
+              <li>
+                Created and edited engaging social media content to drive
+                growth.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-sm font-bold text-white uppercase">Video Editor</h4>
+            <p class="text-neutral-500 my-0.5">
+              2025 - 2026 | 6 Months — Legacy Company
+            </p>
+            <ul class="list-disc pl-4 space-y-1 mt-1 text-neutral-400">
+              <li>
+                Edited ad campaigns and managed fast post-production workflows.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-sm font-bold text-white uppercase">Video Editor</h4>
+            <p class="text-neutral-500 my-0.5">
+              2026 | Current — Bowen Chinese School
+            </p>
+            <ul class="list-disc pl-4 space-y-1 mt-1 text-neutral-400">
+              <li>
+                Lead the video team to produce educational and promotional
+                content.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3
+          class="text-xs tracking-widest uppercase text-neutral-500 font-mono mb-6"
+        >
+          // SOFTWARE
+        </h3>
+        <div class="flex flex-wrap gap-2 mb-8">
+          <span
+            class="px-3 py-1 bg-neutral-900 border border-neutral-800 text-xs rounded text-neutral-300"
+            >DaVinci Resolve</span
+          >
+          <span
+            class="px-3 py-1 bg-neutral-900 border border-neutral-800 text-xs rounded text-neutral-300"
+            >Adobe Premiere Pro</span
+          >
+          <span
+            class="px-3 py-1 bg-neutral-900 border border-neutral-800 text-xs rounded text-neutral-300"
+            >CapCut</span
+          >
+        </div>
+
+        <h3
+          class="text-xs tracking-widest uppercase text-neutral-500 font-mono mb-4"
+        >
+          // SPECIALITIES
+        </h3>
+        <div class="flex flex-wrap gap-2">
+          <span
+            class="px-3 py-1 bg-neutral-900 border border-neutral-800 text-xs rounded text-neutral-300"
+            >Short-form Content</span
+          >
+          <span
+            class="px-3 py-1 bg-neutral-900 border border-neutral-800 text-xs rounded text-neutral-300"
+            >Commercial Editing</span
+          >
+          <span
+            class="px-3 py-1 bg-neutral-900 border border-neutral-800 text-xs rounded text-neutral-300"
+            >Event Highlights</span
+          >
+          <span
+            class="px-3 py-1 bg-neutral-900 border border-neutral-800 text-xs rounded text-neutral-300"
+            >Cinematic Color Grading</span
+          >
+          <span
+            class="px-3 py-1 bg-neutral-900 border border-neutral-800 text-xs rounded text-neutral-300"
+            >Social Media Ads</span
+          >
+          <span
+            class="px-3 py-1 bg-neutral-900 border border-neutral-800 text-xs rounded text-neutral-300"
+            >Retention Editing</span
+          >
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="contact"
+      class="max-w-7xl mx-auto px-6 py-20 border-t border-neutral-900 bg-neutral-950"
+    >
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div>
+          <h3
+            class="text-xs tracking-widest uppercase text-neutral-500 font-mono mb-4"
+          >
+            // CONTACT ME
+          </h3>
+          <h2
+            class="text-4xl font-black text-white uppercase tracking-tight mb-6"
+          >
+            Let's Create Something Great Together
+          </h2>
+          <div class="space-y-3 text-sm text-neutral-400">
+            <p>
+              <span class="text-white font-semibold">Email:</span>
+              heinsismhue@gmail.com
+            </p>
+            <p>
+              <span class="text-white font-semibold">Phone:</span>
+              +95-9964850934
+            </p>
+            <p>
+              <span class="text-white font-semibold">Address:</span> Shwepyithar
+              , Yangon , Myanmar
+            </p>
+          </div>
+        </div>
+        <div class="flex items-end justify-end">
+          <p class="text-xs text-neutral-600 font-mono">
+            © 2026 Hein Sitt Mhue. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script src="./assets/cinematic.js"></script>
+  </body>
+</html>
