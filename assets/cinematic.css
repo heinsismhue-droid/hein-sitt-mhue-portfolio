@@ -2007,3 +2007,497 @@ iframe {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
 }
+
+/* =========================================================
+   PORTFOLIO V2 — APPROVED SECTION REVAMP
+   Hero + resume + contact only.
+   Showcase and case studies remain unchanged.
+   ========================================================= */
+
+:root {
+  --v2-black: #050505;
+  --v2-panel: #0c0a07;
+  --v2-white: #f4f1e8;
+  --v2-amber: #f0a51a;
+  --v2-teal: #13d9c5;
+  --v2-muted: #8f928f;
+  --v2-line: rgba(244, 241, 232, .12);
+}
+
+.portfolio-hero {
+  position: relative;
+  width: min(100% - 36px, 1240px);
+  min-height: clamp(520px, 70vw, 720px);
+  margin: 0 auto;
+  border-bottom: 1px solid var(--v2-line);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.portfolio-hero__meta {
+  position: absolute;
+  top: 42px;
+  z-index: 4;
+  display: grid;
+  gap: 4px;
+  font-family: "DM Mono", monospace;
+  letter-spacing: .17em;
+  text-transform: uppercase;
+}
+
+.portfolio-hero__meta span,
+.portfolio-hero__meta small {
+  color: #797d7a;
+  font-size: .58rem;
+}
+
+.portfolio-hero__meta strong {
+  color: var(--v2-teal);
+  font-size: .6rem;
+  font-weight: 500;
+}
+
+.portfolio-hero__meta--left { left: 0; }
+.portfolio-hero__meta--right { right: 0; text-align: right; }
+
+.portfolio-hero__wordmark {
+  position: absolute;
+  inset: 50% 0 auto;
+  transform: translateY(-44%);
+  z-index: 1;
+  display: grid;
+  justify-items: center;
+  font-family: "Syne", sans-serif;
+  font-weight: 800;
+  line-height: .72;
+  letter-spacing: -.085em;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.portfolio-hero__port {
+  color: var(--v2-white);
+  font-size: clamp(6.8rem, 16vw, 13rem);
+}
+
+.portfolio-hero__folio {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(244, 241, 232, .36);
+  font-size: clamp(6.6rem, 15.2vw, 12.5rem);
+}
+
+.portfolio-hero__folio span {
+  color: var(--v2-amber);
+  -webkit-text-stroke: 0;
+}
+
+.portfolio-polaroid {
+  position: absolute;
+  z-index: 3;
+  width: clamp(145px, 17vw, 205px);
+  padding: 9px 9px 25px;
+  margin: 0;
+  border: 1px solid #242625;
+  background: #0d0e0e;
+  box-shadow: 0 22px 60px rgba(0,0,0,.5);
+}
+
+.portfolio-polaroid img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  filter: saturate(.82) contrast(1.05);
+}
+
+.portfolio-polaroid figcaption {
+  position: absolute;
+  right: 10px;
+  bottom: 8px;
+  color: #767a76;
+  font: 500 .48rem/1 "DM Mono", monospace;
+  letter-spacing: .18em;
+}
+
+.portfolio-polaroid__tape {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  width: 52px;
+  height: 14px;
+  background: rgba(240, 165, 26, .68);
+  transform: translateX(-50%) rotate(-2deg);
+}
+
+.portfolio-polaroid--left {
+  left: 2%;
+  top: 28%;
+  transform: rotate(-8deg);
+}
+
+.portfolio-polaroid--right {
+  right: 3%;
+  bottom: 8%;
+  transform: rotate(8deg);
+}
+
+/* About: clean three-line name and reliable PDF button */
+.about-copy h2 {
+  white-space: normal !important;
+}
+
+.download-cv {
+  text-decoration: none;
+}
+
+/* Resume board */
+.resume-board {
+  width: min(100% - 36px, 1120px);
+  margin: 0 auto;
+  padding: clamp(72px, 9vw, 120px) 0;
+  display: grid;
+  grid-template-columns: minmax(210px, .82fr) minmax(370px, 1.55fr) minmax(230px, .95fr);
+  gap: clamp(34px, 5vw, 72px);
+  border-top: 1px solid var(--v2-line);
+  border-bottom: 1px solid var(--v2-line);
+}
+
+.resume-board__column {
+  display: grid;
+  align-content: start;
+  gap: 46px;
+}
+
+.resume-panel {
+  min-width: 0;
+}
+
+.resume-kicker {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 22px;
+  color: var(--v2-amber);
+  font: 500 .62rem/1 "DM Mono", monospace;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+.resume-kicker span {
+  width: 20px;
+  height: 1px;
+  background: currentColor;
+}
+
+.resume-item + .resume-item {
+  margin-top: 26px;
+}
+
+.resume-item h3,
+.experience-entry h3 {
+  margin: 0;
+  color: var(--v2-white);
+  font: 700 .83rem/1.25 "Manrope", sans-serif;
+  text-transform: uppercase;
+}
+
+.resume-date,
+.experience-entry__company {
+  margin: 7px 0 0;
+  color: var(--v2-teal);
+  font: 500 .56rem/1.45 "DM Mono", monospace;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+.experience-entry + .experience-entry {
+  margin-top: 25px;
+}
+
+.experience-entry__heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: baseline;
+}
+
+.experience-entry__heading span {
+  flex: 0 0 auto;
+  color: #777b78;
+  font: 500 .53rem/1.4 "DM Mono", monospace;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.experience-entry ul {
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+  color: #a5a6a1;
+  font-size: .72rem;
+  line-height: 1.7;
+}
+
+.experience-entry li {
+  position: relative;
+  padding-left: 14px;
+}
+
+.experience-entry li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--v2-amber);
+}
+
+.skill-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.skill-pills span {
+  padding: 9px 13px;
+  border: 1px solid #333532;
+  border-radius: 999px;
+  color: #c9c8c2;
+  background: rgba(255,255,255,.015);
+  font: 500 .54rem/1 "DM Mono", monospace;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.skill-pills--teal span {
+  border-color: rgba(19, 217, 197, .5);
+  color: var(--v2-teal);
+}
+
+/* Contact */
+.contact-revamp {
+  width: min(100% - 36px, 1240px);
+  margin: 0 auto;
+  padding: clamp(78px, 9vw, 130px) 0 36px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(310px, .85fr);
+  gap: clamp(42px, 7vw, 100px);
+  align-items: center;
+  border-top: 1px solid var(--v2-line);
+}
+
+.contact-revamp__kicker {
+  margin: 0 0 27px;
+  color: #747876;
+  font: 500 .66rem/1 "DM Mono", monospace;
+  letter-spacing: .2em;
+}
+
+.contact-revamp h2 {
+  margin: 0;
+  max-width: 720px;
+  color: var(--v2-white);
+  font: 700 clamp(3rem, 6.1vw, 6.2rem)/.88 "Syne", sans-serif;
+  letter-spacing: -.055em;
+}
+
+.contact-revamp h2 span {
+  color: var(--v2-amber);
+}
+
+.contact-list {
+  margin: 34px 0 0;
+  max-width: 650px;
+}
+
+.contact-list > div {
+  display: grid;
+  grid-template-columns: 84px minmax(0, 1fr);
+  gap: 0;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--v2-line);
+}
+
+.contact-list dt {
+  color: var(--v2-teal);
+  font: 500 .53rem/1.4 "DM Mono", monospace;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.contact-list dd {
+  margin: 0;
+  color: #bbbcb7;
+  font-size: .78rem;
+}
+
+.contact-list a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact-list a:hover {
+  color: var(--v2-amber);
+}
+
+.hire-card {
+  padding: clamp(26px, 4vw, 40px);
+  border: 1px solid #30291d;
+  border-radius: 8px;
+  background: linear-gradient(145deg, #0f0c08, #090806);
+  box-shadow: 0 25px 70px rgba(0,0,0,.28);
+}
+
+.hire-card > p {
+  margin: 0;
+  color: var(--v2-white);
+  font: 700 clamp(2rem, 4vw, 3.1rem)/.83 "Syne", sans-serif;
+  letter-spacing: -.04em;
+}
+
+.hire-card > p span {
+  color: var(--v2-amber);
+}
+
+.hire-card small {
+  display: block;
+  margin-top: 18px;
+  color: #868984;
+  font-size: .72rem;
+  line-height: 1.65;
+}
+
+.hire-card a {
+  width: fit-content;
+  margin-top: 25px;
+  padding: 13px 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  border-radius: 999px;
+  color: #080808;
+  background: var(--v2-amber);
+  font: 700 .58rem/1 "DM Mono", monospace;
+  letter-spacing: .16em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.hire-card a span {
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--v2-white);
+  background: #080808;
+}
+
+.contact-copyright {
+  grid-column: 1 / -1;
+  margin: 50px 0 0;
+  color: #565a57;
+  font: 400 .58rem/1.5 "DM Mono", monospace;
+  letter-spacing: .1em;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .portfolio-hero {
+    min-height: 590px;
+  }
+
+  .portfolio-hero__meta {
+    top: 28px;
+  }
+
+  .portfolio-hero__wordmark {
+    transform: translateY(-38%);
+  }
+
+  .portfolio-polaroid--left {
+    top: 35%;
+  }
+
+  .resume-board {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-board__column {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 34px;
+  }
+
+  .contact-revamp {
+    grid-template-columns: 1fr;
+  }
+
+  .hire-card {
+    max-width: 560px;
+  }
+}
+
+@media (max-width: 640px) {
+  .portfolio-hero {
+    width: calc(100% - 28px);
+    min-height: 520px;
+  }
+
+  .portfolio-hero__meta {
+    top: 22px;
+  }
+
+  .portfolio-hero__meta--right {
+    top: auto;
+    right: 0;
+    bottom: 20px;
+  }
+
+  .portfolio-hero__wordmark {
+    inset: 45% 0 auto;
+    transform: translateY(-50%);
+  }
+
+  .portfolio-hero__port,
+  .portfolio-hero__folio {
+    font-size: clamp(4.9rem, 24vw, 7rem);
+  }
+
+  .portfolio-polaroid {
+    width: 112px;
+    padding: 6px 6px 20px;
+  }
+
+  .portfolio-polaroid--left {
+    left: 0;
+    top: 30%;
+  }
+
+  .portfolio-polaroid--right {
+    right: 0;
+    bottom: 12%;
+  }
+
+  .resume-board,
+  .contact-revamp {
+    width: calc(100% - 32px);
+  }
+
+  .resume-board__column {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-entry__heading {
+    display: block;
+  }
+
+  .experience-entry__heading span {
+    display: block;
+    margin-top: 6px;
+  }
+
+  .contact-revamp h2 {
+    font-size: clamp(2.6rem, 12vw, 4.2rem);
+  }
+
+  .contact-list > div {
+    grid-template-columns: 76px minmax(0, 1fr);
+  }
+}
