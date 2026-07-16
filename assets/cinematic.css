@@ -2501,3 +2501,131 @@ iframe {
     grid-template-columns: 76px minmax(0, 1fr);
   }
 }
+
+
+/* =========================================================
+   V2 MOBILE HERO VISIBILITY + IMAGE LOADING STABILITY
+   Keep this block at the absolute bottom of cinematic.css.
+   ========================================================= */
+
+.portfolio-hero,
+.portfolio-hero * {
+  box-sizing: border-box;
+}
+
+.portfolio-hero {
+  contain: layout paint;
+}
+
+.portfolio-polaroid img,
+.about-film-photo img {
+  background: #101111;
+}
+
+/* Prevent the oversized wordmark from clipping on tablets. */
+@media (max-width: 900px) {
+  .portfolio-hero {
+    overflow: hidden;
+  }
+
+  .portfolio-hero__wordmark {
+    width: 100%;
+    max-width: 100%;
+    padding-inline: 8px;
+  }
+
+  .portfolio-hero__port,
+  .portfolio-hero__folio {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    white-space: nowrap;
+  }
+}
+
+/* Phone layout: keep PORT / FOLIO fully visible and photos inside screen. */
+@media (max-width: 640px) {
+  .portfolio-hero {
+    width: 100%;
+    min-height: 620px;
+    margin-inline: 0;
+    padding-inline: 16px;
+    overflow: hidden;
+  }
+
+  .portfolio-hero__meta--left {
+    left: 16px;
+    right: 16px;
+  }
+
+  .portfolio-hero__meta--right {
+    right: 16px;
+    bottom: 18px;
+    max-width: calc(100% - 32px);
+  }
+
+  .portfolio-hero__wordmark {
+    inset: 255px 0 auto;
+    transform: none;
+    width: 100%;
+    padding-inline: 14px;
+    row-gap: 7px;
+  }
+
+  .portfolio-hero__port,
+  .portfolio-hero__folio {
+    font-size: clamp(4.1rem, 20vw, 6.2rem);
+    line-height: .74;
+    letter-spacing: -.075em;
+    transform: none;
+  }
+
+  .portfolio-polaroid {
+    width: clamp(105px, 29vw, 132px);
+  }
+
+  .portfolio-polaroid--left {
+    left: 22px;
+    top: 345px;
+    transform: rotate(-7deg);
+  }
+
+  .portfolio-polaroid--right {
+    right: 20px;
+    bottom: 82px;
+    transform: rotate(7deg);
+  }
+}
+
+/* Narrow phones. */
+@media (max-width: 390px) {
+  .portfolio-hero {
+    min-height: 590px;
+  }
+
+  .portfolio-hero__wordmark {
+    inset: 250px 0 auto;
+    padding-inline: 10px;
+  }
+
+  .portfolio-hero__port,
+  .portfolio-hero__folio {
+    font-size: clamp(3.6rem, 19vw, 4.8rem);
+    letter-spacing: -.065em;
+  }
+
+  .portfolio-polaroid {
+    width: 102px;
+  }
+
+  .portfolio-polaroid--left {
+    left: 16px;
+    top: 338px;
+  }
+
+  .portfolio-polaroid--right {
+    right: 15px;
+    bottom: 86px;
+  }
+}
