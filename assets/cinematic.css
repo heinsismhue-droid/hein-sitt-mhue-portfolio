@@ -1976,3 +1976,34 @@ iframe {
     max-width: 80px !important;
   }
 }
+
+/* =========================================================
+   LANDSCAPE CASE STATS FIX
+   Keeps the existing design and changes only the 16:9 card
+   statistics into a 2 x 2 layout on laptop/desktop.
+   ========================================================= */
+
+.case-grid--final .case-card--landscape .metric-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 1.25rem 1rem !important;
+}
+
+.case-grid--final .case-card--landscape .metric-grid > div {
+  min-width: 0;
+}
+
+.case-grid--final .case-card--landscape .metric-grid strong {
+  font-size: clamp(1.65rem, 2.5vw, 2.4rem) !important;
+  line-height: 1 !important;
+  white-space: nowrap;
+}
+
+.case-grid--final .case-card--landscape .metric-grid span {
+  font-size: .52rem !important;
+}
+
+@media (max-width: 900px) {
+  .case-grid--final .case-card--landscape .metric-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
