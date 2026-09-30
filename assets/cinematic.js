@@ -3,8 +3,8 @@
 const showcaseProjects = {
   grading: [
     { title: "Coffee", id: "1209467321" },
-    { title: "Color", id: "1209467333" },
-    { title: "Vlog By THN", id: "1209467828" }
+    // { title: "Color", id: "1209467333" },
+    { title: "Sports Festival", id: "1231537163" }
   ],
   brand: [
     { title: "Burmese Ghoul", id: "1209467303" },
